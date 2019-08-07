@@ -434,8 +434,14 @@ body{
 }
 
 @media(max-width: 576px){
-  #home{
-    background-attachment: scroll;
+  .menu a i{
+    display: inline;
+  }
+  .menu a span{
+    display: none;
+  }
+  .menu a{
+    padding: 0.2rem 0.6rem;
   }
   .about-wrapper{
     flex-direction: column;
