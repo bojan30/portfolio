@@ -11,12 +11,8 @@ particlesJS.load('particles-js', 'particles.json');
 function parallax(target, amount) {
   let scroll = window.pageYOffset;
   let el = document.querySelector(target);
-  el.style.backgroundPositionY = (amount - 1) * scroll + "px";
+  el.style.backgroundPositionY = -amount * scroll + "px";
 }
-
-window.addEventListener("scroll", () => {
-  parallax("#home", 0.7);
-});
 
 //add active class to nav
 
@@ -106,4 +102,14 @@ launcherDown.addEventListener('click', (e)=>{
   e.preventDefault();
   scroll('#about', 800);
 })
+
+//disable parallax on small screens
+
+window.addEventListener("scroll", () => {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    parallax('#home', 0);
+  } else {
+    parallax('#home', 0.7);
+  }
+});
 
