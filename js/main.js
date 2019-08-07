@@ -2,20 +2,8 @@ const logoOutline = document.querySelector(".cls-1");
 const nav = document.querySelector('#nav');
 const launcherUp = document.querySelector('.launcher');
 const launcherDown = document.querySelector('.content a');
-const content = document.querySelector('.content-container');
-console.log(content.innerHTML);
-// Listen for orientation changes
-window.addEventListener("orientationchange", function () {
-  // if orientation is portrait than show content
-  if(window.orientation === 0){
-    document.body.innerHTML = content.innerHTML;
-  }
-  else{
-    document.body.innerHTML = 'Please change orientation!!!';
-  }
-}, false);
-//load particles
 
+//load particles
 particlesJS.load('particles-js', 'particles.json');
 
 //parallax effect
