@@ -2,13 +2,18 @@ const logoOutline = document.querySelector(".cls-1");
 const nav = document.querySelector('#nav');
 const launcherUp = document.querySelector('.launcher');
 const launcherDown = document.querySelector('.content a');
+const content = document.querySelector('.content-container');
 
 // Listen for orientation changes
 window.addEventListener("orientationchange", function () {
-  // Announce the new orientation number
-  alert(window.orientation);
+  // if orientation is portrait than show content
+  if(window.orientation = 0){
+    document.body.innerHTML = content;
+  }
+  else{
+    document.body.innerHTML = 'Please change orientation!!!';
+  }
 }, false);
-
 //load particles
 
 particlesJS.load('particles-js', 'particles.json');
