@@ -3,6 +3,12 @@ const nav = document.querySelector('#nav');
 const launcherUp = document.querySelector('.launcher');
 const launcherDown = document.querySelector('.content a');
 
+// Listen for orientation changes
+window.addEventListener("orientationchange", function () {
+  // Announce the new orientation number
+  alert(window.orientation);
+}, false);
+
 //load particles
 
 particlesJS.load('particles-js', 'particles.json');

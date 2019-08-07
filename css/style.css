@@ -50,7 +50,7 @@ body{
   background: 
   linear-gradient(to right,rgba(60, 62, 64, 0.9), rgba(60, 62, 64,0.9)), url('../images/header-background.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: 0px center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
