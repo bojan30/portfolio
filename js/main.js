@@ -7,7 +7,7 @@ const content = document.querySelector('.content-container');
 // Listen for orientation changes
 window.addEventListener("orientationchange", function () {
   // if orientation is portrait than show content
-  if(window.orientation = 0){
+  if(window.orientation === 0){
     document.body.innerHTML = content;
   }
   else{
