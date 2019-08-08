@@ -2,6 +2,12 @@ const logoOutline = document.querySelector(".cls-1");
 const nav = document.querySelector('#nav');
 const launcherUp = document.querySelector('.launcher');
 const launcherDown = document.querySelector('.content a');
+//scroll to top on relaod
+
+window.addEventListener('load', ()=>{
+  //reset scroll position to top
+  window.scrollTo(0,0);
+})
 
 //load particles
 particlesJS.load('particles-js', 'particles.json');
@@ -112,3 +118,24 @@ window.addEventListener("scroll", () => {
   }
 });
 
+//scroll animation function
+window.addEventListener('scroll', debounce(()=>{
+  animateOnScroll('.portfolio-item', 0.8, 'fade-in');
+  animateOnScroll('.info', 0.8, 'fade-in-left');
+  animateOnScroll('.skill', 0.8, 'progress', false);
+},16, true));
+
+//animate on scroll function
+function animateOnScroll(target, triggerPosition, activeClass, reversible = false){
+  let targetEl = document.querySelectorAll(target);
+  targetEl.forEach(el=>{
+    let targetElTop = el.getBoundingClientRect().top;
+    let windowHeight = window.innerHeight;
+    if (targetElTop <= windowHeight * triggerPosition) {
+      el.classList.add(activeClass);
+    }
+    else if (targetElTop >= windowHeight && reversible) {
+      el.classList.remove(activeClass);
+    }
+  })
+}

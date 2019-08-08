@@ -186,7 +186,7 @@ body{
 
 .about-wrapper{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .info{
   width: 50%;
@@ -194,6 +194,9 @@ body{
   flex-direction: column;
   align-items: center;
   padding: 0 2rem 0 0;
+  transform: translateX(-100%);
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
 }
 .image {
   flex: 1;
@@ -208,6 +211,7 @@ body{
 .skills{
   flex: 1;
   text-align: left;
+  overflow: hidden;
 }
 .skill{
   flex: 1;
@@ -232,6 +236,8 @@ body{
   height: 100%;
   background-color: #f24259;
   border-radius: 0.4rem;
+  width: 0%;
+  transition: width 1s ease-in-out;
 }
 .percent{
   position: absolute;
@@ -257,6 +263,8 @@ body{
   cursor: pointer;
   overflow: hidden;
   border-radius: 0.1rem;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 .portfolio-item img{
   display: block;
@@ -420,6 +428,40 @@ body{
 }
 .social a:hover{
   color: #f24259;
+}
+
+/*scroll animation classes*/
+.fade-in{
+  opacity: 1;
+}
+.fade-in-left{
+  opacity: 1;
+  transform: translateX(0);
+}
+/*progress bar animation setting*/
+.skill:nth-child(1).progress .progress-inner{
+  width: 99%;
+}
+.skill:nth-child(2).progress .progress-inner{
+  width: 89%;
+}
+.skill:nth-child(3).progress .progress-inner{
+  width: 92%;
+}
+.skill:nth-child(4).progress .progress-inner{
+  width: 80%;
+}
+.skill:nth-child(5).progress .progress-inner{
+  width: 75%;
+}
+.skill:nth-child(6).progress .progress-inner{
+  width: 55%;
+}
+.skill:nth-child(7).progress .progress-inner{
+  width: 45%;
+}
+.skill:nth-child(8).progress .progress-inner{
+  width: 40%;
 }
 
 /*media*/
