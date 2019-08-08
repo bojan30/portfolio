@@ -195,7 +195,7 @@ body{
   align-items: center;
   padding: 0 2rem 0 0;
   transform: translateX(-100%);
-  transition: all 0.2s ease-in-out;
+  transition: all 1s ease-in-out;
   opacity: 0;
 }
 .image {
@@ -212,6 +212,11 @@ body{
   flex: 1;
   text-align: left;
   overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.skills.progress{
+  opacity: 1;
 }
 .skill{
   flex: 1;
@@ -330,6 +335,9 @@ body{
 .contact-form{
   width: 50%;
   margin: auto;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 .form-group{
   display: flex;
@@ -439,29 +447,33 @@ body{
   transform: translateX(0);
 }
 /*progress bar animation setting*/
-.skill:nth-child(1).progress .progress-inner{
+.skills.progress .skill:nth-child(1) .progress-inner{
   width: 99%;
 }
-.skill:nth-child(2).progress .progress-inner{
+.skills.progress .skill:nth-child(2) .progress-inner{
   width: 89%;
 }
-.skill:nth-child(3).progress .progress-inner{
+.skills.progress .skill:nth-child(3) .progress-inner{
   width: 92%;
 }
-.skill:nth-child(4).progress .progress-inner{
+.skills.progress .skill:nth-child(4) .progress-inner{
   width: 80%;
 }
-.skill:nth-child(5).progress .progress-inner{
+.skills.progress .skill:nth-child(5) .progress-inner{
   width: 75%;
 }
-.skill:nth-child(6).progress .progress-inner{
+.skills.progress .skill:nth-child(6) .progress-inner{
   width: 55%;
 }
-.skill:nth-child(7).progress .progress-inner{
+.skills.progress .skill:nth-child(7) .progress-inner{
   width: 45%;
 }
-.skill:nth-child(8).progress .progress-inner{
+.skills.progress .skill:nth-child(8) .progress-inner{
   width: 40%;
+}
+.fade-in-grow{
+  opacity: 1;
+  transform: scale(1);
 }
 
 /*media*/

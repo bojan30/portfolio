@@ -122,7 +122,8 @@ window.addEventListener("scroll", () => {
 window.addEventListener('scroll', debounce(()=>{
   animateOnScroll('.portfolio-item', 0.8, 'fade-in');
   animateOnScroll('.info', 0.8, 'fade-in-left');
-  animateOnScroll('.skill', 0.8, 'progress', false);
+  animateOnScroll('.skills', 0.8, 'progress');
+  animateOnScroll('.contact-form', 0.8, 'fade-in-grow');
 },16, true));
 
 //animate on scroll function
