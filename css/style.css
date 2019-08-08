@@ -1,6 +1,9 @@
 /*font*/
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 /*reset*/
 * {
   margin: 0;
@@ -23,7 +26,8 @@ textarea {
 
 /*global*/
 body {
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: 'Lato', sans-serif;
   line-height: 1.6;
 }
 .subtitle {
@@ -277,6 +281,9 @@ body {
   flex: 1;
   margin-bottom: 1.2rem;
   font-size: 0.8rem;
+}
+.skill:last-child{
+  margin-bottom: 0;
 }
 .skill-title {
   margin-bottom: 0.8rem;
