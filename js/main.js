@@ -63,7 +63,7 @@ links.forEach(link=>{
   link.addEventListener('click', (e)=>{
     e.preventDefault();
     let target = link.getAttribute('href');
-    scroll(target, 800);
+    scroll(target, 400);
   });
 })
 
@@ -120,7 +120,7 @@ window.addEventListener("scroll", () => {
 
 //scroll animation function
 window.addEventListener('scroll', debounce(()=>{
-  animateOnScroll('.portfolio-item', 0.8, 'fade-in');
+  animateOnScroll('.portfolio-item', 0.8, 'fade-in-up');
   animateOnScroll('.info', 0.8, 'fade-in-left');
   animateOnScroll('.skills', 0.8, 'progress');
   animateOnScroll('.contact-form', 0.8, 'fade-in-grow');
