@@ -260,7 +260,10 @@ body {
   display: block;
   width: 100%;
   border-radius: 50%;
-  border: 0.2rem solid #f24259;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .skills {
   -webkit-box-flex: 1;
