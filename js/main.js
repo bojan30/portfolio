@@ -47,7 +47,7 @@ window.addEventListener('scroll', ()=>{
     let targetSection = document.querySelector(link.getAttribute('href'));
     let top = targetSection.offsetTop;
     let bottom = top + targetSection.scrollHeight;
-    if (top - scrollAmount <= 15 && bottom - scrollAmount >= 15) {
+    if (top - scrollAmount - nav.scrollHeight <= 0 && bottom - scrollAmount >= 0) {
       removeActiveClass(links);
       link.classList.add('active');
     }
@@ -75,7 +75,7 @@ function scroll(target, duration) {
   //distance from the top
   const position = el.getBoundingClientRect().top + scrollAmount;
   //animation distance
-  const animationDistance = position - scrollAmount;
+  const animationDistance = position - scrollAmount - nav.scrollHeight + 15;
   let startTime = null;
   function animate(time) {
     if (startTime === null) startTime = time;
