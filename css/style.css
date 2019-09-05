@@ -3,6 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+/*#f24259*/
 
 /*reset*/
 * {
@@ -598,12 +599,15 @@ body {
   width: 75%;
 }
 .skills.progress .skill:nth-child(6) .progress-inner {
-  width: 55%;
+  width: 70%;
 }
 .skills.progress .skill:nth-child(7) .progress-inner {
-  width: 45%;
+  width: 55%;
 }
 .skills.progress .skill:nth-child(8) .progress-inner {
+  width: 45%;
+}
+.skills.progress .skill:nth-child(9) .progress-inner {
   width: 40%;
 }
 .fade-in-grow {
